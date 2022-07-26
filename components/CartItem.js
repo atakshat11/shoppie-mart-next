@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { parseCookies } from "nookies";
 import {faMultiply} from "@fortawesome/free-solid-svg-icons";
-import {baseUrl} from '../helpers/baseUrl'
+import baseUrl from '../helpers/baseUrl'
 const CartItem = ({ product }) => {
 
   console.log('product crt item',product)

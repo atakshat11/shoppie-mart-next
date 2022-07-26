@@ -2,7 +2,7 @@ import React from "react";
 import { Field, Form, Formik } from "formik";
 import cookie from "js-cookie";
 import { toast } from "react-toastify";
-import {baseUrl} from '../helpers/baseUrl'
+import baseUrl from '../helpers/baseUrl'
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 

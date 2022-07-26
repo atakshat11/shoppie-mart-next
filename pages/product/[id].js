@@ -10,7 +10,7 @@ import {
   faPlus,
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
-import {baseUrl} from '../../helpers/baseUrl'
+import baseUrl from '../../helpers/baseUrl'
 const Product = ({ product }) => {
   console.log(product);
 

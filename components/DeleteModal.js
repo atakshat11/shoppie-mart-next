@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useRouter } from "next/router";
-import {baseUrl} from '../helpers/baseUrl'
+import baseUrl from '../helpers/baseUrl'
 export default function DeleteModal({ product }) {
   const router = useRouter();
   const [show, setShow] = useState(false);

@@ -3,7 +3,7 @@ import { useState } from "react";
 import {parseCookies} from "nookies";
 import { toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-  import {baseUrl} from '../helpers/baseUrl'
+  import baseUrl from '../helpers/baseUrl'
 const AddProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");

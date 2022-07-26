@@ -3,7 +3,7 @@ import { Card, Col, ListGroup, Row, Button } from "react-bootstrap";
 import StripeCheckout from "react-stripe-checkout";
 import axios from  'axios'
 import getStripe from "../helpers/get-stripe";
-import baseUrl from "helpers/baseUrl";
+import baseUrl from "../helpers/baseUrl";
 const OrderAmount = ({ products }) => {
 
      const handleCheckout = async (paymentInfo) => {

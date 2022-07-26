@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import CartItem from "../components/CartItem";
 import OrderAmount from "../components/OrderAmount";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import {baseUrl} from '../helpers/baseUrl'
+import baseUrl from '../helpers/baseUrl'
 const Cart = ({ token, error, products }) => {
   const router = useRouter();
 

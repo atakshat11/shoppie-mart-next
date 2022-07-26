@@ -2,7 +2,7 @@ import React from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Link from "next/link";
-import {baseUrl} from '../helpers/baseUrl'
+import baseUrl from '../helpers/baseUrl'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
