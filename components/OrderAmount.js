@@ -10,7 +10,7 @@ const OrderAmount = ({ products }) => {
  // Create Stripe checkout
  const {
   data: { id },
-} = await axios.post('/api/checkout_sessions', {
+} = await axios.post(`/api/checkout_sessions`, {
   items: Object.entries(paymentInfo).map(([{ id, quantity }]) => ({
     price: id,
     quantity,
