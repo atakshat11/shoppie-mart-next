@@ -14,7 +14,7 @@ const Home = ({ products }) => {
     </>
   );
 };
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${baseUrl}/api/products`);
   const data = await res.json();
 
