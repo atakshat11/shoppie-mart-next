@@ -2,6 +2,7 @@ import React from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Link from "next/link";
+import {baseUrl} from '../helpers/baseUrl'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -107,7 +108,7 @@ const Signup = () => {
         },
         body: JSON.stringify(values),
       };
-      const res = await fetch(`/api/signup`, option);
+      const res = await fetch(`${baseUrl}/api/signup`, option);
       const signupData = await res.json();
 
       if (signupData.error) {

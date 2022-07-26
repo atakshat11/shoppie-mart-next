@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import CartItem from "../components/CartItem";
 import OrderAmount from "../components/OrderAmount";
 import { Card, Col, Container, Row } from "react-bootstrap";
-
+import {baseUrl} from '../helpers/baseUrl'
 const Cart = ({ token, error, products }) => {
   const router = useRouter();
 
@@ -89,7 +89,7 @@ export async function getServerSideProps(ctx) {
       props: { products: [] },
     };
   }
-  const res = await fetch(`/api/cart`, {
+  const res = await fetch(`${baseUrl}/api/cart`, {
     headers: {
       Authorization: token,
     },

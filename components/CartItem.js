@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { parseCookies } from "nookies";
 import {faMultiply} from "@fortawesome/free-solid-svg-icons";
-
+import {baseUrl} from '../helpers/baseUrl'
 const CartItem = ({ product }) => {
 
   console.log('product crt item',product)
@@ -11,7 +11,7 @@ const CartItem = ({ product }) => {
   const { token } = parseCookies();
   const handleRemove = async (pid) => {
     console.log("handle remove", pid);
-    const res = await fetch(`/api/cart`, {
+    const res = await fetch(`${baseUrl}/api/cart`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -3,6 +3,7 @@ import { Card, Col, ListGroup, Row, Button } from "react-bootstrap";
 import StripeCheckout from "react-stripe-checkout";
 import axios from  'axios'
 import getStripe from "../helpers/get-stripe";
+import baseUrl from "helpers/baseUrl";
 const OrderAmount = ({ products }) => {
 
      const handleCheckout = async (paymentInfo) => {
@@ -10,7 +11,7 @@ const OrderAmount = ({ products }) => {
  // Create Stripe checkout
  const {
   data: { id },
-} = await axios.post(`/api/checkout_sessions`, {
+} = await axios.post(`${baseUrl}/api/checkout_sessions`, {
   items: Object.entries(paymentInfo).map(([{ id, quantity }]) => ({
     price: id,
     quantity,
@@ -24,7 +25,7 @@ await stripe.redirectToCheckout({ sessionId: id });
         // const {token}=parseCookies()
         // console.log('token in cart dta handle check',token);
         // console.log(paymentInfo)
-        // const res = await fetch(`/api/payment`,{
+        // const res = await fetch(`${baseUrl}/api/payment`,{
         //     method:"POST",
         //     headers:{
         //        "Content-Type":"application/json",
