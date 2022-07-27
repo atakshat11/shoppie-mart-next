@@ -94,6 +94,7 @@ export async function getServerSideProps(ctx) {
       Authorization: token,
     },
   });
+  console.log(res,'product res,.....')
   const products = await res.json();
   if (products.error) {
     return {
